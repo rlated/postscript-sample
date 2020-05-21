@@ -1,0 +1,11 @@
+/i 0 def
+/draw { dup 100 moveto 400 lineto } def
+/run {
+  i setlinewidth
+  i 10 mul 100 add draw
+  stroke
+  /i i 1 add def
+  i 10 ne { run } if
+} def
+run
+showpage
